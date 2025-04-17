@@ -4,5 +4,10 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+I'm Tran Anh Quoc (aka tAQ/taqsoimh) - Vietnamese.
+
+I'm studying Cyber Security at USTH (University of Science and Technology of Hanoi)
+
+A USTH Coder Club (UCC) member
+
+CTF Player - DFIR
