@@ -9,20 +9,23 @@
 ';
 
 @font-face {
-  font-family: "Katuri";
+  font-family: "Waff";
   src: url("/assets/fonts/katuri.woff") format("woff");
+  /* Nếu font chỉ có 1 weight, đổi thành 400 (hoặc 500/700 tuỳ file) */
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
+/* Áp dụng font cho toàn bộ trang */
 html {
-  font-family: "Katuri",
+  font-family: "Waff",
                system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
                Arial, "Noto Sans", "Liberation Sans", sans-serif,
                "Apple Color Emoji", "Segoe UI Emoji" !important;
 }
 
+/* Buộc các khu vực kế thừa font */
 body,
 .post-content,
 .post-title,
@@ -30,23 +33,24 @@ body,
 h1, h2, h3, h4, h5, h6,
 header, footer,
 .sidebar, .topbar, .navbar, nav,
-.toc, .pagination, .search, .menu,
-article, section, main, aside,
+.toc-list-item, .pagination, .search, .menu,
+dialog, article, section, main, aside,
 p, span, li, blockquote, small, strong, em,
 button, input, select, textarea, label,
 code, pre, kbd, samp {
   font-family: inherit !important;
 }
 
-
+/* ===== Tiêu đề: # > ## > ### (responsive với clamp) ===== */
 
 /* Tiêu đề trang/bài (khác với h1 trong nội dung) */
 :where(.post-content, .page, main, article) {
-  font-size: 10px !important; 
+  /* Cách 1: hạ cỡ chung, rồi trả lại cho phần cần lớn */
+  font-size: 10px !important; /* <= chỉnh 12~14 tuỳ mắt */
   line-height: 1.6;
 }
 
-
+/* Trả lại/giữ cỡ lớn cho tiêu đề */
 :where(.post-content, .page, main, article) h1 { font-size: 35px; line-height: 1.35; }
 :where(.post-content, .page, main, article) h2 { font-size: 27px !important; line-height: 1.35; }
 :where(.post-content, .page, main, article) h3 { font-size: 22px !important; line-height: 1.35; }
@@ -61,7 +65,7 @@ code, pre, kbd, samp {
   font-size: 12px !important;
   line-height: 1.7;
 }
-// the? <b>
+// the <b>
 // :where(.post-content, .page, main, article) :where(b, strong) {
 //   font-size: 16px !important;
 //   font-weight: 700;
@@ -99,13 +103,31 @@ code, pre, kbd, samp {
     // font-weight: bold;
 }
 
+:where(.post-content, .page, main, article) :where(.node-name--H3){
+    font-size: 13px;
+}
+
+.panel-heading{
+    font-size: 20px !important;
+}
+#access-lastmod .content > li > a , .post-tag, #search-input::placeholder, .nav-item span{
+    font-size: 13px !important;  /* chỉnh số theo ý */
+    line-height: 1.2;
+}
+
+#toc-bar .label{
+    font-size: 18px !important;
+}
 
 .topbar .site-title,
 .topbar .site-title a,
 .topbar-title,
 .navbar .site-title,
+.toc-list-item, .toc-popup,
+dialog >.label,
+.label,
 .navbar-brand {
-  font-family: "Katuri",
+  font-family: "Waff",
                system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
                Arial, "Noto Sans", "Liberation Sans", sans-serif,
                "Apple Color Emoji", "Segoe UI Emoji" !important;
