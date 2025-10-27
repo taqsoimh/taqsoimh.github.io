@@ -9,7 +9,7 @@
 ';
 
 @font-face {
-  font-family: "Waff";
+  font-family: "Katuri";
   src: url("/assets/fonts/katuri.woff") format("woff");
   /* Nếu font chỉ có 1 weight, đổi thành 400 (hoặc 500/700 tuỳ file) */
   font-weight: 100 900;
@@ -19,7 +19,7 @@
 
 /* Áp dụng font cho toàn bộ trang */
 html {
-  font-family: "Waff",
+  font-family: "Katuri",
                system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
                Arial, "Noto Sans", "Liberation Sans", sans-serif,
                "Apple Color Emoji", "Segoe UI Emoji" !important;
@@ -127,7 +127,7 @@ code, pre, kbd, samp {
 dialog >.label,
 .label,
 .navbar-brand {
-  font-family: "Waff",
+  font-family: "Katuri",
                system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
                Arial, "Noto Sans", "Liberation Sans", sans-serif,
                "Apple Color Emoji", "Segoe UI Emoji" !important;
